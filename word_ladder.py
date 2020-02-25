@@ -42,7 +42,7 @@ def word_ladder(start_word, end_word, dictionary_file='words5.dict'):
     while len(d) > 0:
         a = d.popleft()
         for x in words:
-            if _adjacent(a[len(a)-1, e):
+            if _adjacent(a[len(a)-1], e):
                 if x == last:
                     a.append(x)
                     if len(a) == 10 and first != "stone" and first != "money": 
