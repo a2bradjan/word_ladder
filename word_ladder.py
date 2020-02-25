@@ -31,6 +31,9 @@ def word_ladder(start_word, end_word, dictionary_file='words5.dict'):
     ladder = []
     first = start_word
     last = end_word
+    if first == last:
+        firstword = [first]
+        return firstword
     d = deque()
     ladder.append(first)
     o = open(dictionary_file, 'r')
@@ -59,7 +62,7 @@ def verify_word_ladder(ladder):
     len(ladder) = e
     if e == 0:
         return False
-    for i in range(e-1):
+    while count < e-1:
         if _adjacent(ladder[count], ladder[count+1]) == True:
             count += 1
         else:
