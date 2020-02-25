@@ -59,10 +59,9 @@ def verify_word_ladder(ladder):
     otherwise returns False.
     '''
     count = 0
-    len(ladder) = e
-    if e == 0:
+    if len(ladder) == 0:
         return False
-    while count < e-1:
+    while count < (len(ladder)-1:
         if _adjacent(ladder[count], ladder[count+1]) == True:
             count += 1
         else:
@@ -80,19 +79,19 @@ def _adjacent(word1, word2):
     False
     '''
     count = 0
-    word1 = e
-    word2 = f
+    e = word1
+    f = word2
     if len(e) != len(f):
         return False
-    elif e[:1] == f[:1]:
+    if e[:1] == f[:1]:
         count += 1
-    elif e[1:2] == f[1:2]:
+    if e[1:2] == f[1:2]:
         count += 1
-    elif e[2:3] == f[2:3]:
+    if e[2:3] == f[2:3]:
         count += 1
-    elif e[3:4] == f[3:4]:
+    if e[3:4] == f[3:4]:
         count += 1
-    elif e[4:5] == f[4:5]:
+    if e[4:5] == f[4:5]:
         count += 1
     if count == 4:
         return True
