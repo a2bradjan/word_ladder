@@ -1,5 +1,7 @@
 #!/bin/python3
-
+import collections
+import copy
+from collections import deque
 
 def word_ladder(start_word, end_word, dictionary_file='words5.dict'):
     '''
@@ -61,7 +63,7 @@ def verify_word_ladder(ladder):
     count = 0
     if len(ladder) == 0:
         return False
-    while count < (len(ladder)-1:
+    while count < len(ladder)-1:
         if _adjacent(ladder[count], ladder[count+1]) == True:
             count += 1
         else:
